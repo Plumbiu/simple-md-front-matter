@@ -1,0 +1,31 @@
+{
+  "name": "simple-md-front-matter",
+  "version": "0.0.1",
+  "description": "A library for parse front-matter",
+  "main": "index.js",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "build": "esbuild index.ts --outdir=dist --minify --bundle --sourcemap --format=esm"
+  },
+  "keywords": [
+    "markdown",
+    "js",
+    "front-matter",
+    "md",
+    "parse"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@types/js-yaml": "^4.0.6",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.3",
+    "vitest": "^0.34.5"
+  }
+}
