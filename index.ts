@@ -2,7 +2,7 @@ import { load } from 'js-yaml'
 
 export default function parseFrontMatter(md: string) {
   const raw = md.slice(md.indexOf('---') + 3, md.indexOf('---', 3))
-  return load(raw) as Content
+  return load(raw)
 }
 
 export function parseWithGoStyle(md: string) {
@@ -10,7 +10,7 @@ export function parseWithGoStyle(md: string) {
   try {
     return {
       err: null,
-      content: load(raw) as Content,
+      content: load(raw)
     }
   } catch (err: any) {
     return {

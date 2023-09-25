@@ -1,15 +1,13 @@
-type Content = Record<string, number | number[] | string | string[]>
-
 declare module 'simple-md-front-matter' {
-  export function parseWithGoStyle(md: string):
+  export function parseWithGoStyle<T>(md: string):
     | {
         err: null
-        content: Content
+        content: T
       }
     | {
         err: any
         content?: undefined
       }
 
-  export default function parseFrontMatter(md: string): Content
+  export default function parseFrontMatter<T>(md: string): T
 }

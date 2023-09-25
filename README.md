@@ -9,6 +9,12 @@ baz: 14
 ---
 ```
 
+## Installing
+
+```bash
+npm install simple-md-front-matter
+```
+
 ## Usage
 
 **Basic Usage:**
@@ -23,14 +29,13 @@ foo: bar
 baz: 14
 ---
   `)
-/*
+  /*
 {
   foo: bar,
   baz: 14,
 }
 */
-}
-catch(err) {
+} catch (err) {
   /* handle error */
 }
 ```
@@ -53,11 +58,38 @@ if (err) {
   /* handle error */
 } else {
   console.log(content)
-/*
+  /*
 {
   foo: bar,
   baz: 14,
 }
 */
 }
+```
+
+**Type Support:**
+
+With generics:
+
+```ts
+import parseFrontMatter from 'simple-md-front-matter'
+
+interface FM {
+  foo: string
+  baz: number
+}
+
+parseFrontMatter<FM>(`
+---
+foo: bar
+baz: 14
+---
+  `)
+
+const { err, content } = parseWithGoStyle<FM>(`
+---
+foo: bar
+baz: 14
+---
+`)
 ```
