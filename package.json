@@ -1,8 +1,9 @@
 {
   "name": "simple-md-front-matter",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A library for parse front-matter",
   "main": "dist/index.js",
+  "type": "module",
   "files": [
     "dist",
     "index.d.ts"
